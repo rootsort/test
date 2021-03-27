@@ -8,6 +8,6 @@ void print()
 };
 int main()
 {
-
+Foo f;
 cout<<"Hello World"<<endl;
 }
