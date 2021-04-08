@@ -29,8 +29,10 @@ pipeline {
                     params.executeTest == true
                 }
             }
-            steps {
-                echo 'Testing application'
+            steps { 
+                script {
+                gv.testApp()
+                }
                 sh 'java -version'
             }
         }
