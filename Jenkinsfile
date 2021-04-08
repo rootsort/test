@@ -31,7 +31,7 @@ pipeline {
             }
             steps { 
                 script {
-                gv.testApp()
+                gv.TestApp()
                 }
                 sh 'java -version'
             }
