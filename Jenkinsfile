@@ -12,16 +12,11 @@ pipeline {
                 sh 'java -version'
             }
         }
-       stage('Deploy') { 
-11
+        stage('Deploy') { 
             steps {
-12
                 echo 'Deploying application'
-13
                 sh 'java -version'
-14
             }
-15
         }
     }
 }
