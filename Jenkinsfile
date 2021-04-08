@@ -4,7 +4,7 @@ pipeline {
         NEW_VER = '1.34'
     }
     parameters {
-        booleanParam (name: 'executeTest',defaultValue: true, description: '')
+        booleanParam (name: 'executeTest',defaultValue: false, description: '')
     }
     stages {
         stage('Build') {
@@ -16,7 +16,8 @@ pipeline {
         stage('Test') {
             when {
                 expression {
-                    BRANCH_NAME == 'master' || BRANCH_NAME == 'dev'
+                    //BRANCH_NAME == 'master' || BRANCH_NAME == 'dev'
+                    params.executeTest == true
                 }
             }
             steps {
