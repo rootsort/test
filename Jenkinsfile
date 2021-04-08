@@ -4,7 +4,7 @@ pipeline {
         NEW_VER = '1.34'
     }
     parameters {
-        boolenParam (name: 'executeTest',defaultValue: true, description: '')
+        booleanParam (name: 'executeTest',defaultValue: true, description: '')
     }
     stages {
         stage('Build') {
